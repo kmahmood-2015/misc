@@ -1,5 +1,5 @@
 FROM jenkins
-RUN /usr/local/bin/install-plugins.sh credentials:2.1.4 docker-workflow:1.8 workflow-aggregator:2.3 github-organization-folder:1.4 credentials-binding:1.9
+RUN /usr/local/bin/install-plugins.sh credentials:2.1.4 docker-workflow:1.8 workflow-aggregator:2.3 github-organization-folder:1.4 credentials-binding:1.9 ssh-agent:1.13
 COPY hudson.tasks.Maven.xml /var/jenkins_home/hudson.tasks.Maven.xml
 COPY demo-pipeline-config.xml /var/jenkins_home/jobs/MyPipelineDemo/config.xml
 USER root
